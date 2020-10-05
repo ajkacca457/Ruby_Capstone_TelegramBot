@@ -1,6 +1,5 @@
 # Multi_Purpose_Telegram_Bot
-> Building a multipurpose bot that can be initialized on the command line(windows) / terminal(mac &amp; linux) where it can perform various activities.
-This multipurpose Telegram Bot can greet users in different language,it can get motivational quote, assign user breaking bad characters,can fetch cute dog photos, can generate random facts and can determine which Harrypotter house the user belongs to.
+> Building a multipurpose bot that can perform various activities.This multipurpose Telegram Bot can greet users in different language,it can get motivational quote, assign user breaking bad characters,can fetch cute dog photos, can generate random facts and can determine which Harrypotter house the user belongs to.
 
  > This is a capstone project for the ruby curriculum at microverse coding school.
 
