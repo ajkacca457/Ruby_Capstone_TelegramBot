@@ -10,7 +10,7 @@
 - Breaking Bad API
 - Chuck Norris Joke API
 - Random Fact API
-- Random Fact API
+- Randomdog API
 
 <h2>Project Presentation Link</h2>
 
