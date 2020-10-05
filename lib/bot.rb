@@ -3,6 +3,9 @@
 # rubocop:disable Style/RedundantInterpolation
 # rubocop:disable Layout/IndentationConsistency
 require 'telegram_bot'
+require_relative 'motivate.rb'
+require_relative 'chucknorris.rb'
+require_relative 'randomdog.rb'
 
 token = '1331572713:AAHUBQRhsWNHaPIcQ0OmCA0ha7B8tZcR-Bs'
 bot = TelegramBot.new(token: token)
@@ -12,7 +15,7 @@ bot.get_updates(fail_silently: true) do |message|
   command = message.get_command_for(bot)
 
 
-  puts "welcome to the smartbot thing"
+  puts "welcome to the smartbot"
 
   message.reply do |reply|
     case command
@@ -33,6 +36,24 @@ bot.get_updates(fail_silently: true) do |message|
                     /fact : educates you with random facts and gq.
                     /Harrypotter: Select you in a harry potter house.
                     "
+    when /greet/i
+        greetings = ['bonjour', 'hola', 'hallo', 'sveiki', 'namaste', 'salaam', 'szia', 'halo', 'ciao']
+        reply.text = "#{greetings.sample.capitalize}, #{message.from.first_name}!"
+
+    when '/motivate'
+           values = Motivate.new
+           value = values.select_random
+           reply.text = "#{value['text']}. 🤖"
+
+    when '/norris'
+          values = Norris.new
+          value = values.make_the_request
+          reply.text = "#{value['value']}. 🤖"
+
+    when '/dogtoday'
+          values = Randomdog.new
+          value = values.make_the_request
+          reply.text = "#{value['message']}. 🤖"
     else
 
       reply.text = "I have no idea what #{command.inspect} means."
