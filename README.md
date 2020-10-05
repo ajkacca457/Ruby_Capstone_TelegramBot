@@ -20,7 +20,7 @@ This multipurpose Telegram Bot can greet users in different language,it can get 
 After cloning the git folder you have to run:
 
     $ run ruby bin/main.rb
-    
+
 - Navigate to your telegram account
 
 - create a bot in Telegram.
@@ -31,7 +31,7 @@ After cloning the git folder you have to run:
 
 - Or you can go to your telegram account search for :
   ```
-   @smartbot
+  t.me/smartmicroversebot
 
    ```
 - Then type commands like "/greet, /start, /help, /bb etc"  
