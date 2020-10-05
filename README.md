@@ -23,14 +23,19 @@ After cloning the git folder you have to run:
     ```
 - Navigate to your telegram account
 
-- On your telegram account search for :
+- create a bot in Telegram.
+
+- get the token and replace it with the given token in bot.rb file.
+
+- then run the commands in your bot.
+
+- Or you can go to your telegram account search for :
   ```
    @smartbot
 
    ```
 - Then type commands like "/greet, /start, /help, /bb etc"  
 
-     ![](img/ezgif.com-crop.gif)
 
 ## How to Test the Methods In the Classes
 
@@ -45,9 +50,8 @@ After cloning the git folder you have to run:
 
  Navigate into the spec folder and run the following at the console:
 
-   ```console
-   rspec ./spec/main_spec.rb
-   ```
+  - rspec ./spec/main_spec.rb
+
    Prerequisites
    Text editor,Github profile and Git.
 
