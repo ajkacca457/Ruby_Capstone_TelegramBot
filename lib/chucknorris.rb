@@ -1,9 +1,11 @@
+# frozen_string_literal: true
+
 # rubocop:disable Lint/UriEscapeUnescape
 require 'telegram_bot'
 require 'net/http'
 require 'json'
 require_relative 'bot.rb'
-
+# class for chucknorris command
 class Norris
   @values = nil
 
