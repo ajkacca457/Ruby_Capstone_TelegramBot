@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 require_relative '../lib/motivate.rb'
 require_relative '../lib/bbcharachters.rb'
 require_relative '../lib/chucknorris.rb'

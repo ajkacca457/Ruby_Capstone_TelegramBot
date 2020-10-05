@@ -1,6 +1,3 @@
-# frozen_string_literal: true
-
-# rubocop:disable Layout/LineLength
 # rubocop:disable Metrics/BlockLength
 # rubocop:disable Layout/IndentationConsistency
 require 'telegram_bot'
@@ -24,11 +21,16 @@ bot.get_updates(fail_silently: true) do |message|
     case command
 
     when /start/i
-      instructions = ['Welcome to smartbot type /help to know all about smartbot',
-                      'Nice to have you here type /help to know all about smartbot',
-                      'How is it going today? type /help to know all about smartbot',
-                      'Want any help to start? type /help to know all about smartbot']
-      reply.text = "#{instructions.sample.capitalize}, #{message.from.first_name}!"
+      instructions = ['Welcome to smartbot type /help to know all about
+                      smartbot',
+                      'Nice to have you here type /help to know all about
+                        smartbot',
+                      'How is it going today? type /help to know all about
+                        smartbot',
+                      'Want any help to start? type /help to know all about
+                      smartbot']
+      reply.text = "#{instructions.sample.capitalize},
+      #{message.from.first_name}!"
 
     when /help/i
       reply.text = "/greet : sends you greeting in different language,
@@ -41,7 +43,8 @@ bot.get_updates(fail_silently: true) do |message|
                     "
     when /greet/i
       greetings = %w[bonjour hola hallo sveiki namaste salaam szia halo ciao]
-        reply.text = "#{greetings.sample.capitalize}, #{message.from.first_name}!"
+        reply.text = "#{greetings.sample.capitalize}, #{message.from.first_name}
+        !"
 
     when '/motivate'
       values = Motivate.new
@@ -61,7 +64,8 @@ bot.get_updates(fail_silently: true) do |message|
     when '/bb'
       values = Bbcharachter.new
           value = values.make_the_request
-          puts reply.text = "you are : #{value[0]['name']}. #{value[0]['img']} from Breaking Bad 🤖"
+          puts reply.text = "you are : #{value[0]['name']}. #{value[0]['img']}
+          from Breaking Bad 🤖"
     when '/fact'
       values = Facts.new
           value = values.make_the_request
@@ -72,14 +76,15 @@ bot.get_updates(fail_silently: true) do |message|
           puts reply.text = "You are a part of ..#{value}🤖"
     else
       otherresponse = ['I have no idea what it means try /help',
-                       'Are you sure you wrote the right command? try /help to check',
+                       'Are you sure you wrote the right command? try /help to
+                        check',
                        'what do you want to do? try /help to check']
-      reply.text = "#{otherresponse.sample.capitalize}, #{message.from.first_name}!"
+      reply.text = "#{otherresponse.sample.capitalize},
+      #{message.from.first_name}!"
     end
     puts "sending #{reply.text.inspect} to @#{message.from.username}"
     reply.send_with(bot)
   end
 end
 # rubocop:enable Metrics/BlockLength
-# rubocop: enable Layout/LineLength
 # rubocop: enable Layout/IndentationConsistency
