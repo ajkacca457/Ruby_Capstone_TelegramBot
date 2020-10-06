@@ -1,6 +1,7 @@
-# frozen_string_literal: true
-
+# rubocop:disable Metrics/AbcSize
+# rubocop:disable Metrics/CyclomaticComplexity
 # rubocop:disable Metrics/BlockLength
+# rubocop:disable Metrics/MethodLength
 # rubocop:disable Layout/IndentationConsistency
 require 'telegram_bot'
 require_relative '../lib/chucknorris.rb'
@@ -96,5 +97,8 @@ class Bot
     end
   end
 end
+# rubocop:enable Metrics/AbcSize
+# rubocop:enable Metrics/CyclomaticComplexity
 # rubocop:enable Metrics/BlockLength
-# rubocop: enable Layout/IndentationConsistency
+# rubocop:enable Metrics/MethodLength
+# rubocop:enable Layout/IndentationConsistency

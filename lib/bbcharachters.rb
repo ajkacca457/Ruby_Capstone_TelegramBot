@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 require 'net/http'
 require 'json'
 # this is a class for breaking bad api

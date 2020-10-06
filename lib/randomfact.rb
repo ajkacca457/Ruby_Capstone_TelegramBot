@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 require 'net/http'
 require 'json'
 # class for fact command
