@@ -48,12 +48,12 @@ After cloning the git folder you have to run:
  Open Command Prompt or Terminal and run:
 
   ```console
-  gem install Rspec
+    bundle install
   ```
 
  Navigate into the spec folder and run the following at the console:
 
-  - rspec ./spec/main_spec.rb
+  - rspec 
 
    Prerequisites
    Text editor,Github profile and Git.
