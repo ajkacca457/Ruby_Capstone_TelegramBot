@@ -61,7 +61,7 @@ PLATFORMS
 DEPENDENCIES
   json
   net-http-persistent (~> 2.9, >= 2.9.4)
-  rspec
+  rspec (~> 3.9)
   rubocop (~> 0.81.0)
   telegram_bot
 

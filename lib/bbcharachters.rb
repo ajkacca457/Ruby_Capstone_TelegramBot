@@ -1,11 +1,10 @@
-require 'telegram_bot'
+# frozen_string_literal: true
+
 require 'net/http'
 require 'json'
-require_relative 'bot.rb'
-# class for breaking bad command
+# this is a class for breaking bad api
 class Bbcharachter
-  @values = nil
-
+  attr_reader :values
   def initialize
     @values = make_the_request
   end

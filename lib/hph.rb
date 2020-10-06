@@ -1,24 +1,24 @@
-# rubocop:disable Lint/UriEscapeUnescape
-require 'telegram_bot'
+# frozen_string_literal: true
+
 require 'net/http'
 require 'json'
-require_relative 'bot.rb'
-# class for Harrypotterhouse command
+# class for house command
 class Harrypotterhouse
-  @values = nil
-
+  attr_reader :values
   def initialize
-    @values = @make_the_request
+    @values = make_the_request
+  end
+
+  def select_random
+    @values = @values.sample
+    @values
   end
 
   def make_the_request
     url = 'https://www.potterapi.com/v1/sortingHat'
-
-    escaped_address = URI.escape(url)
-    uri = URI.parse(escaped_address)
+    uri = URI(url)
     response = Net::HTTP.get(uri)
     response = JSON.parse(response)
     response
   end
 end
-# rubocop: enable Lint/UriEscapeUnescape
