@@ -22,13 +22,13 @@ https://www.loom.com/share/7db046fbc35344a9877228fa564312a2
 - You can clone it using git clone command.
 After cloning the git folder you have to run:
 
-    $ run ruby bin/main.rb
-
 - Navigate to your telegram account
 
 - create a bot in Telegram.
 
 - get the token and replace it with the given token in bot.rb file.
+
+-  $ run ruby bin/main.rb
 
 - then run the commands in your bot.
 
@@ -53,7 +53,7 @@ After cloning the git folder you have to run:
 
  Navigate into the spec folder and run the following at the console:
 
-  - rspec 
+  - rspec
 
    Prerequisites
    Text editor,Github profile and Git.
